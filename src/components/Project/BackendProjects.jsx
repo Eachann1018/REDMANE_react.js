@@ -34,6 +34,7 @@ import WehiLogo from '../../assets/logos/wehi-logo.png';
 import MelbUniLogo from '../../assets/logos/unimelb-logo.png';
 
 const drawerWidth = 240;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -122,7 +123,7 @@ export default function BackendProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://115.146.86.241:8000/projects/');
+        const response = await fetch(`${BASE_URL}/projects/`);
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }
@@ -285,3 +286,18 @@ export default function BackendProjects() {
     </ThemeProvider>
   );
 }
+
+// import { useEffect } from 'react';
+// import axios from 'axios';
+//
+// const [rows, setRows] = useState([]);
+//
+// useEffect(() => {
+//   axios.get('http://127.0.0.1:8888/projects/')
+//     .then((response) => {
+//       setRows(response.data);
+//     })
+//     .catch((error) => {
+//       console.error('Error fetching project data:', error);
+//     });
+// }, []);
