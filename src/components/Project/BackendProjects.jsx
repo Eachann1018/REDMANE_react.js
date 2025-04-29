@@ -286,18 +286,3 @@ export default function BackendProjects() {
     </ThemeProvider>
   );
 }
-
-// import { useEffect } from 'react';
-// import axios from 'axios';
-//
-// const [rows, setRows] = useState([]);
-//
-// useEffect(() => {
-//   axios.get('http://127.0.0.1:8888/projects/')
-//     .then((response) => {
-//       setRows(response.data);
-//     })
-//     .catch((error) => {
-//       console.error('Error fetching project data:', error);
-//     });
-// }, []);
