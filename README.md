@@ -68,7 +68,7 @@ REDMANE_react.js/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/alexandra5279/REDMANE_react.js.git
+   git clone git@github.com:WEHI-RCPStudentInternship/REDMANE_react.js.git
    cd REDMANE_react.js
    ```
 
